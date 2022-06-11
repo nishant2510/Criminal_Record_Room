@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/action"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/add_new"
+            android:title="Add Criminal Record"/>
+
+        <item
+            android:id="@+id/menu_last_added_criminal"
+            android:title="@string/last_added_criminal"/>
+    </group>
+
+    <group
+        android:id="@+id/exim"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/menu_export_data"
+            android:title="@string/export_criminal_data"/>
+
+        <item
+            android:id="@+id/menu_import_data"
+            android:title="@string/import_criminal_data"/>
+
+    </group>
+
+    <group
+        android:id="@+id/pages"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/menu_about"
+            android:icon="@drawable/ic_baseline_notes_24"
+            android:title="About Us"/>
+
+        <item
+            android:id="@+id/menu_contact"
+            android:icon="@drawable/ic_baseline_notes_24"
+            android:title="Contact Us"/>
+
+    </group>
+
+    <group
+        android:id="@+id/utils"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/menu_admin_chat"
+            android:icon="@drawable/ic_baseline_notes_24"
+            android:title="Admin Chat"/>
+
+    </group>
+</menu>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+app:strokeWidth="1dp"
+app:strokeColor="#cccccc"
+app:cardCornerRadius="3dp"
+app:contentPadding="10dp"
+app:cardPreventCornerOverlap="true"
+app:cardUseCompatPadding="false">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+
+    <ImageView
+        android:id="@+id/criminal_photo"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/criminal_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/case_priority"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/blank"
+        tools:srcCompat="@drawable/blank" />
+
+    <TextView
+        android:id="@+id/criminal_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/criminal_photo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Darius P. Dehoyos" />
+
+    <TextView
+        android:id="@+id/aadhaar_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/criminal_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/criminal_name"
+        tools:text="76435642468"
+        />
+
+    <TextView
+        android:id="@+id/case_priority"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/criminal_photo"
+        app:layout_constraintTop_toBottomOf="@+id/aadhaar_number"
+        tools:text="Low Priority"/>
+
+    <TextView
+        android:id="@+id/criminal_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/case_priority"
+        app:layout_constraintTop_toBottomOf="@+id/case_priority"
+        tools:text="38 Years" />
+
+    <TextView
+        android:id="@+id/criminal_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/criminal_age"
+        app:layout_constraintTop_toTopOf="@+id/criminal_age"
+        tools:text="Male" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools">-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/criminal_photo"-->
+<!--        android:layout_width="115dp"-->
+<!--        android:layout_height="115dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:contentDescription="@string/criminal_image"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/case_priority"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/blank"-->
+<!--        tools:srcCompat="@drawable/blank" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/criminal_name"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/criminal_photo"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:text="Darius P. Dehoyos" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/aadhaar_number"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/criminal_photo"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/criminal_name"-->
+<!--        tools:text="76435642468"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/case_priority"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/criminal_photo"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/aadhaar_number"-->
+<!--        tools:text="Low Priority"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/criminal_age"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/case_priority"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/case_priority"-->
+<!--        tools:text="38 Years" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/criminal_gender"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/criminal_age"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/criminal_age"-->
+<!--        tools:text="Male" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/horizontalRule"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="2dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/criminal_photo"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:background="@color/teal_700" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

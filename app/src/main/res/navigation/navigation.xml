@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/criminalListFragment"
+        android:name="com.example.minorproject.ui.CriminalListFragment"
+        android:label="fragment_criminal_list"
+        tools:layout="@layout/fragment_criminal_list" >
+        <action
+            android:id="@+id/action_criminalListFragment_to_criminalDetailFragment"
+            app:destination="@id/criminalDetailFragment"
+            app:popUpTo="@id/criminalListFragment" />
+        <action
+            android:id="@+id/action_criminalListFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/criminalListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_criminalListFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:popUpTo="@id/criminalListFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_criminalListFragment_to_contactFragment"
+            app:destination="@id/contactFragment2"
+            app:popUpTo="@id/criminalListFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_criminalListFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:popUpTo="@id/criminalListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/criminalDetailFragment"
+        android:name="com.example.minorproject.ui.CriminalDetailFragment"
+        android:label="fragment_criminal_detail"
+        tools:layout="@layout/fragment_criminal_detail">
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.minorproject.authentication.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_criminalListFragment"
+            app:destination="@id/criminalListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.minorproject.authentication.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment_to_criminalListFragment"
+            app:destination="@id/criminalListFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.minorproject.ui.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/contactFragment2"
+        android:name="com.example.minorproject.ui.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.minorproject.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+</navigation>

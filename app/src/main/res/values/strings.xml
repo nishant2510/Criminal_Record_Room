@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Criminal Record Room</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="criminal_image">Criminal Image</string>
+    <string name="enter_criminal_name">Enter Criminal Name</string>
+    <string name="enter_criminal_id">Enter Criminal ID</string>
+    <string name="case_priority">Case Priority</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="enter_aadhaar_number">Enter Aadhaar Number</string>
+
+    <string name="years">%1$d years</string>
+    <string name="search">Search</string>
+    <string name="enter_crime_description">Enter Crime Description</string>
+    <string name="case_summary">Case Summary</string>
+    <string name="import_criminal_data">Import Criminal Data</string>
+    <string name="export_criminal_data">Export Criminal Data</string>
+    <string name="last_added_criminal">Last Added Criminal</string>
+    <string name="share_criminal_data">Share Criminal Data</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="not_registered_click_here_to_register">Not Registered? Click Here To Register</string>
+    <string name="admin_chat">Admin Chat</string>
+    <string name="about_us_description">A trustworthy and efficient app that assists police officials in their hectic tasks, thus saving their crucial time and energy.</string>
+    <string name="contact_us_description">Need Help? \nEmail Us: recordroomassistance@gmail.com \nPhone Number: 0181 2291661 \nTo reset the password, mail us an image of your valid ID proof holding in your hand</string>
+
+</resources>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.CriminalDetailFragment">
+
+        <ImageView
+            android:id="@+id/criminal_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/criminal_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/blank"
+            tools:srcCompat="@drawable/blank" />
+
+        <ImageView
+            android:id="@+id/photo_from_camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_photo_camera_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/criminal_photo"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:id="@+id/photo_from_gallery"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_image_24"
+            app:layout_constraintEnd_toEndOf="@id/criminal_photo"
+            app:layout_constraintTop_toBottomOf="@id/criminal_photo" />
+
+
+        <EditText
+            android:id="@+id/criminal_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/enter_criminal_name"
+            android:inputType="text"
+            android:maxLength="50"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/criminal_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/aadhaar_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/enter_aadhaar_number"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/criminal_photo"
+            app:layout_constraintTop_toBottomOf="@id/criminal_name" />
+
+        <Spinner
+            android:id="@+id/case_priority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/aadhaar_number"
+            app:layout_constraintTop_toBottomOf="@+id/photo_from_gallery" />
+
+        <RadioGroup
+            android:id="@+id/criminal_gender_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/criminal_age"
+            app:layout_constraintTop_toBottomOf="@+id/criminal_age">
+
+            <RadioButton
+                android:id="@+id/gender_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/gender_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/female" />
+
+            <RadioButton
+                android:id="@+id/gender_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="@string/other" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/case_priority_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/case_priority"
+            app:layout_constraintBottom_toBottomOf="@+id/case_priority"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/case_priority"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <Spinner
+            android:id="@+id/criminal_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/case_priority"
+            app:layout_constraintTop_toBottomOf="@+id/case_priority" />
+
+        <TextView
+            android:id="@+id/criminal_gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            app:layout_constraintBottom_toBottomOf="@+id/criminal_gender_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/criminal_gender_group" />
+
+        <TextView
+            android:id="@+id/criminal_age_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age"
+            app:layout_constraintBottom_toBottomOf="@+id/criminal_age"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/criminal_age" />
+
+        <TextView
+            android:id="@+id/case_summary_label"
+            android:text="@string/case_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/criminal_gender_group"/>
+
+
+        <TextView
+            android:id="@+id/crime_description_label"
+            android:text="Crime Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/case_summary_label"/>
+
+        <EditText
+            android:id="@+id/crime_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_crime_description"
+            app:layout_constraintTop_toBottomOf="@id/crime_description_label" />
+
+        <TextView
+            android:id="@+id/crime_date_label"
+            android:text="Crime Date (DD/MM/YYYY)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crime_description"/>
+
+        <EditText
+            android:id="@+id/crime_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Crime Date"
+            app:layout_constraintTop_toBottomOf="@id/crime_date_label" />
+
+        <TextView
+            android:id="@+id/crime_time_label"
+            android:text="Crime Time (24H Format)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crime_date"/>
+
+        <EditText
+            android:id="@+id/crime_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Crime Time"
+            android:inputType="time"
+            app:layout_constraintTop_toBottomOf="@id/crime_time_label" />
+
+        <TextView
+            android:id="@+id/crime_location_label"
+            android:text="Crime Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crime_time"/>
+
+        <EditText
+            android:id="@+id/crime_location"
+            android:hint="Enter Crime Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crime_location_label"/>
+
+        <TextView
+            android:id="@+id/officer_on_duty_label"
+            android:text="Officer On Duty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crime_location"/>
+
+        <EditText
+            android:id="@+id/officer_on_duty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter The Name Of Officer On Duty"
+            app:layout_constraintTop_toBottomOf="@id/officer_on_duty_label" />
+
+        <Button
+            android:id="@+id/delete_criminal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
+            android:text="@string/delete"
+            app:layout_constraintTop_toBottomOf="@id/officer_on_duty"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/save_criminal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
+            android:text="@string/save"
+            app:layout_constraintTop_toBottomOf="@+id/officer_on_duty"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
+
+
